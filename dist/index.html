@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content", id="modal-content">
+            <div class="modal-header">
+                <h2>Place yer ships!</h2>
+                <button id="rotate">Rotate</button>
+            </div>
+            <div class="board modal-board">
+                <!-- Generate cells for the first board -->
+                <script>
+                    for (let i = 0; i < 100; i++) {
+                        document.write(`<div class="modal-cell" id="b-${i}"></div>`);
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <h1>Battleship</h1>
+    </div>
+    <div class="container">
+        <div class="board player">
+            <!-- Generate cells for the first board -->
+            <script>
+                for (let i = 0; i < 100; i++) {
+                    document.write(`<div class="cell" id="p-${i}"></div>`);
+                }
+            </script>
+        </div>
+        <div class="board enemy">
+            <!-- Generate cells for the second board -->
+            <script>
+                for (let i = 0; i < 100; i++) {
+                    document.write(`<div class="cell enemy-cell disable-click" id="e-${i}"></div>`);
+                }
+            </script>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
